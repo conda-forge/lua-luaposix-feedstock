@@ -1,6 +1,5 @@
 {% set name = "lua-luaposix" %}
 {% set version = "35.0" %}
-{% set sha256 = "a4edf2f715feff65acb009e8d1689e57ec665eb79bc36a6649fae55eafd56809" %}
 
 package:
   name: {{ name }} 
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://github.com/luaposix/luaposix/archive/refs/tags/v35.0.tar.gz
-  sha256: {{ sha256 }}
+  sha256: a4edf2f715feff65acb009e8d1689e57ec665eb79bc36a6649fae55eafd56809
 
 build:
   number: 0
@@ -22,17 +21,13 @@ requirements:
   build:
     - {{ compiler('c') }}
   host:
-    - libgcc  # [linux]
     - zlib
     - luarocks
     - lua
     - perl
   run:
-    - libgcc  # [linux]
-    - zlib
     - lua
     - luarocks
-    - perl
 
 test:
   commands:
