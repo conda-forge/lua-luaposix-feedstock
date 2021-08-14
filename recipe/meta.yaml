@@ -10,7 +10,7 @@ source:
   sha256: a4edf2f715feff65acb009e8d1689e57ec665eb79bc36a6649fae55eafd56809
 
 build:
-  number: 0
+  number: 1
   ## osx lua build is broken, see https://github.com/conda-forge/lua-feedstock/pull/40
   skip: true  # [not linux]
   rpaths:
