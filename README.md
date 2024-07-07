@@ -53,13 +53,6 @@ Current build status
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/lua-luaposix-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_" alt="variant">
                 </a>
               </td>
-            </tr><tr>
-              <td>osx_arm64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5932&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/lua-luaposix-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_" alt="variant">
-                </a>
-              </td>
             </tr>
           </tbody>
         </table>
@@ -190,5 +183,6 @@ Feedstock Maintainers
 =====================
 
 * [@izahn](https://github.com/izahn/)
+* [@jan-janssen](https://github.com/jan-janssen/)
 * [@jerowe](https://github.com/jerowe/)
 
