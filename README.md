@@ -169,5 +169,6 @@ Feedstock Maintainers
 =====================
 
 * [@izahn](https://github.com/izahn/)
+* [@jan-janssen](https://github.com/jan-janssen/)
 * [@jerowe](https://github.com/jerowe/)
 
