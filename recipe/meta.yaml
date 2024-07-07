@@ -25,7 +25,6 @@ requirements:
     - luarocks
     - lua
     - perl
-    - libxcrypt
   run:
     - lua
     - luarocks
@@ -50,3 +49,4 @@ extra:
   recipe-maintainers:
     - jerowe
     - izahn
+    - jan-janssen
