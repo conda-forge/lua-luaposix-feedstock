@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/luaposix/luaposix/archive/v{{ version }}.tar.gz
-  sha256: a4edf2f715feff65acb009e8d1689e57ec665eb79bc36a6649fae55eafd56809
+  sha256: 44e5087cd3c47058f9934b90c0017e4cf870b71619f99707dd433074622debb1
 
 build:
-  number: 1
+  number: 0
   ## osx lua build is broken, see https://github.com/conda-forge/lua-feedstock/pull/40
   skip: true  # [not linux]
   rpaths:
@@ -26,6 +26,7 @@ requirements:
     - luarocks
     - lua
     - perl
+    - libxcrypt
   run:
     - lua
     - luarocks
