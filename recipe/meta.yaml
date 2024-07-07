@@ -30,7 +30,6 @@ requirements:
   run:
     - lua
     - luarocks
-    - libxcrypt
 
 test:
   commands:
