@@ -26,6 +26,7 @@ requirements:
     - luarocks
     - lua
     - perl
+    - libxcrypt
   run:
     - lua
     - luarocks
