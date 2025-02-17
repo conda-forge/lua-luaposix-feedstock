@@ -1,13 +1,13 @@
 {% set name = "lua-luaposix" %}
-{% set version = "36.2.1" %}
+{% set version = "36.3" %}
 
 package:
-  name: {{ name }} 
+  name: {{ name }}
   version: {{ version }}
 
 source:
   url: https://github.com/luaposix/luaposix/archive/v{{ version }}.tar.gz
-  sha256: 44e5087cd3c47058f9934b90c0017e4cf870b71619f99707dd433074622debb1
+  sha256: 82cd9a96c41a4a3205c050206f0564ff4456f773a8f9ffc9235ff8f1907ca5e6
 
 build:
   number: 0
@@ -40,10 +40,10 @@ about:
   license_family: MIT
   summary: 'This is a POSIX binding for LuaJIT, Lua 5.1, 5.2 and 5.3'
   description: |
-       This is a POSIX binding for LuaJIT, Lua 5.1, 5.2, 5.3 and 5.4; like most libraries
-       it simply binds to C APIs on the underlying system, so it won't work on
-       non-POSIX systems. However, it does try to detect the level of POSIX
-       conformance of the underlying system and bind only available APIs.
+    This is a POSIX binding for LuaJIT, Lua 5.1, 5.2, 5.3 and 5.4; like most libraries
+    it simply binds to C APIs on the underlying system, so it won't work on
+    non-POSIX systems. However, it does try to detect the level of POSIX
+    conformance of the underlying system and bind only available APIs.
 
 extra:
   recipe-maintainers:
