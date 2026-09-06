@@ -1,25 +1,29 @@
-{% set name = "lua-luaposix" %}
-{% set version = "36.3" %}
+schema_version: 1
+
+context:
+  name: lua-luaposix
+  version: "36.3"
 
 package:
-  name: {{ name }}
-  version: {{ version }}
+  name: ${{ name }}
+  version: ${{ version }}
 
 source:
-  url: https://github.com/luaposix/luaposix/archive/v{{ version }}.tar.gz
+  url: https://github.com/luaposix/luaposix/archive/v${{ version }}.tar.gz
   sha256: 82cd9a96c41a4a3205c050206f0564ff4456f773a8f9ffc9235ff8f1907ca5e6
 
 build:
-  number: 0
-  skip: true  # [win]
-  rpaths:
-    - lib/lua/5.4/
-    - lib/
+  number: 1
+  skip: win
+  dynamic_linking:
+    rpaths:
+      - lib/lua/5.4/
+      - lib/
 
 requirements:
   build:
-    - {{ compiler('c') }}
-    - {{ stdlib("c") }}
+    - ${{ compiler('c') }}
+    - ${{ stdlib("c") }}
   host:
     - zlib
     - luarocks
@@ -29,21 +33,22 @@ requirements:
     - lua
     - luarocks
 
-test:
-  commands:
-    - lua -e "require 'posix'"
+tests:
+  - script:
+      - lua -e "require 'posix'"
 
 about:
-  home: 'http://luaposix.github.io/luaposix/'
   license: MIT
   license_file: LICENSE
-  license_family: MIT
-  summary: 'This is a POSIX binding for LuaJIT, Lua 5.1, 5.2 and 5.3'
+  summary: This is a POSIX binding for LuaJIT, Lua 5.1, 5.2 and 5.3
   description: |
     This is a POSIX binding for LuaJIT, Lua 5.1, 5.2, 5.3 and 5.4; like most libraries
     it simply binds to C APIs on the underlying system, so it won't work on
     non-POSIX systems. However, it does try to detect the level of POSIX
     conformance of the underlying system and bind only available APIs.
+
+
+  homepage: http://luaposix.github.io/luaposix/
 
 extra:
   recipe-maintainers:
