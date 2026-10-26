@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: lua-luaposix
-  version: "37.0"
+  version: "38"
 
 package:
   name: ${{ name }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/luaposix/luaposix/archive/v${{ version }}.tar.gz
-  sha256: 3a0cf9fc9459ae0975afd1e24ea552decfcda2231651a0d3bd6e1f075e089e01
+  sha256: fb4a5b4b1f872416ed436fced73180aa93b2ab5838d1b263f254b35dc95c434d
 
 build:
   number: 0
